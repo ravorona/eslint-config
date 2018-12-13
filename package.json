@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "ESLint configuration",
     "main": ".eslintrc",
-    "repository": "git@github.com:ravorona/eslintrc.git",
+    "repository": "git@github.com:ravorona/eslint-config.git",
     "author": "Ravorona <h.rakotonjanahary@gmail.com>",
     "license": "MIT",
     "keywords": [
