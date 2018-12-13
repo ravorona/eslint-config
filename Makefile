@@ -3,6 +3,9 @@
 publish:
 	@npm publish --access public
 
+prerelease:
+	@npm version patch
+
 patch:
 	@npm version patch
 
@@ -11,3 +14,6 @@ minor:
 
 major:
 	@npm version major
+
+from-git:
+	@npm version from-git
