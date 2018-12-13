@@ -3,10 +3,26 @@ ESLint configuration
 
 ## Install
 Yarn:
-```
-yarn add @ravorona/eslint eslint eslint-plugin-const-case -D
+```bash
+yarn add -D \
+    @ravorona/eslint-config \
+    eslint \
+    eslint-plugin-const-case
 ```
 NPM:
+```bash
+npm i --save-dev \
+    @ravorona/eslint-config \
+    eslint \
+    eslint-plugin-const-case
 ```
-npm i @ravorona/eslint eslint eslint-plugin-const-case --save-dev
+
+## Usage
+Update extends property inside your stylelint configuration file
+
+```json
+{
+    "extends": "@ravorona"
+}
 ```
+
