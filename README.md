@@ -1,5 +1,5 @@
 # ESLINTRC
-ESLint configuration
+[ESLint](https://eslint.org) configuration
 
 ## Install
 Yarn:
@@ -16,7 +16,7 @@ npm i --save-dev \
 ```
 
 ## Usage
-Update extends property inside your stylelint configuration file
+Update extends property inside your [ESLint configuration](https://eslint.org/docs/user-guide/configuring)
 
 ```json
 {
