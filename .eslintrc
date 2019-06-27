@@ -9,8 +9,8 @@
     },
     "parserOptions": {
         "parser": "babel-eslint",
-        "ecmaVersion": 6,
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaVersion": 9
     },
     "globals": {
         "process": true
