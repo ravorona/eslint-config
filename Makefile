@@ -1,8 +1,5 @@
 # Makefile
 
-publish:
-	@npm publish --access public
-
 prerelease:
 	@npm version patch
 
