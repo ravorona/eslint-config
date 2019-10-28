@@ -2,8 +2,10 @@ name: Publish Eslint Config
 
 on:
   push:
-    tags:
-      - '**'
+    branches:
+      - master
+    #tags:
+    #  - '**'
 
 jobs:
   publish:
@@ -15,26 +17,27 @@ jobs:
 
     steps:
     # Checkout repository
-    - uses: actions/checkout@v1
-      name: Checkout repository
+    - name: Checkout repository
+      uses: actions/checkout@v1
+
+    # Setup nodejs
+    - name: Setup nodejs
+      uses: actions/setup-node@v1
 
     # Publish to npm registry
-    - uses: actions/setup-node@v1
-      name: Publish to NPM Registry
+    - name: Publish to NPM Registry
       with:
         node-version: '10.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm publish
+      run: npm publish
       env:
-        CI: true
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     # Publish to github package registry
-    - uses: actions/setup-node@v1
-      name: Publish to Github Package Repository
+    - name: Publish to Github Package Repository
       with:
         registry-url: 'https://npm.pkg.github.com'
-    - run: npm publish
+      run: npm publish
       env:
         CI: true
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
