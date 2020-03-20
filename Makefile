@@ -15,5 +15,5 @@ major:
 from-git:
 	@npm version from-git
 
-publish
+publish:
     @npm publish
