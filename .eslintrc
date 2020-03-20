@@ -10,7 +10,7 @@
     "parserOptions": {
         "parser": "babel-eslint",
         "sourceType": "module",
-        "ecmaVersion": 9
+        "ecmaVersion": 2020
     },
     "globals": {
         "process": true
@@ -33,7 +33,7 @@
         "func-call-spacing": [2, "never"],
         "no-console": 0,
         "handle-callback-err": [2, "^(err|error)$" ],
-        "indent": [2, 2, {"SwitchCase": 1, "MemberExpression": 1}],
+        "indent": [2, 4, {"SwitchCase": 1, "MemberExpression": 1}],
         "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
         "keyword-spacing": [2, { "before": true, "after": true }],
         "new-cap": [2, { "newIsCap": true, "capIsNew": false }],
