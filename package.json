@@ -4,17 +4,20 @@
     "description": "ESLint configuration",
     "main": ".eslintrc",
     "repository": "git@github.com:ravorona/eslint-config.git",
-    "author": "Ravorona <h.rakotonjanahary@gmail.com>",
+    "author": "яαvoroηα <h.rakotonjanahary@gmail.com>",
     "license": "MIT",
     "keywords": [
         "ravorona",
         "eslint",
-        "eslintconfig"
+        "prettier"
     ],
-    "peerDependencies": {
-        "eslint": "^7.0.0"
-    },
     "engines": {
         "node": ">=8.0.0"
+    },
+    "peerDependencies": {
+        "eslint": "^8.1.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "prettier": "^2.4.1"
     }
 }
