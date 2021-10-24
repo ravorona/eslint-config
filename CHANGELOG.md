@@ -1,4 +1,7 @@
 # Changelog
+**3.0.1**
+- Add prettier configuration
+- Documentation update
 **3.0.0**
 - Prettier for formatting rules
 - Eslint for code quality rules
