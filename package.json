@@ -8,8 +8,7 @@
     "license": "MIT",
     "keywords": [
         "ravorona",
-        "eslint",
-        "prettier"
+        "eslint"
     ],
     "engines": {
         "node": ">=8.0.0"
@@ -17,7 +16,6 @@
     "peerDependencies": {
         "eslint": "^8.1.0",
         "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "prettier": "^2.4.1"
+        "eslint-plugin-prettier": "^4.0.0"
     }
 }
