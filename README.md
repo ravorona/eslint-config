@@ -8,19 +8,13 @@ Yarn:
 ```bash
 yarn add -D \
     @ravorona/eslint-config \
-    eslint \
-    eslint-config-prettier \
-    eslint-plugin-prettier \
-    prettier
+    eslint
 ```
 NPM:
 ```bash
 npm i --save-dev \
     @ravorona/eslint-config \
-    eslint \
-    eslint-config-prettier \
-    eslint-plugin-prettier \
-    prettier
+    eslint
 ```
 
 ## Usage
