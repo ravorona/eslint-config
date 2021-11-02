@@ -42,6 +42,7 @@
         "no-implied-eval": "error",
         "no-irregular-whitespace": "error",
         "no-iterator": "error",
+        "no-magic-numbers": "error",
         "no-new-object": "error",
         "no-new-require": "error",
         "no-new-wrappers": "error",
