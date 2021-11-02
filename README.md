@@ -1,7 +1,7 @@
 ![Publish](https://github.com/ravorona/eslint-config/actions/workflows/publish.yml/badge.svg)
 
 # ESLint configuration
-Javascript style guide using [ESLint](https://eslint.org) with [Prettier](https://prettier.io)
+Javascript code quality guide using [ESLint](https://eslint.org)
 
 ## Install
 Yarn:
@@ -30,7 +30,7 @@ Set `extends` property inside your [ESLint configuration](https://eslint.org/doc
 }
 ```
 
-Add and fill your [Prettier configuration file](https://prettier.io/docs/en/configuration.html) – e.g:
+Prefer [Prettier](https://prettier.io) for formatting rules by adding your [Prettier configuration file](https://prettier.io/docs/en/configuration.html) – e.g:
 ```json
 {
     "printWidth": 120,
