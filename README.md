@@ -30,16 +30,5 @@ Set `extends` property inside your [ESLint configuration](https://eslint.org/doc
 }
 ```
 
-Prefer [Prettier](https://prettier.io) for formatting rules by adding your [Prettier configuration file](https://prettier.io/docs/en/configuration.html) – e.g:
-```json
-{
-    "printWidth": 120,
-    "useTabs": false,
-    "tabWidth": 4,
-    "singleQuote": true,
-    "quoteProps": "consistent",
-    "arrowParens": "avoid",
-    "trailingComma": "none",
-    "semi": false
-}
-```
+## Formatting rules
+Prefer [Prettier](https://prettier.io) for formatting rules.
