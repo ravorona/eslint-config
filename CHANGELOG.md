@@ -1,3 +1,10 @@
+### [4.1.1](https://github.com/ravorona/eslint-config/compare/4.1.0...4.1.1) (2022-11-14)
+
+
+### Features
+
+* object-curly-newline rule use consistent ([3f05479](https://github.com/ravorona/eslint-config/commit/3f05479a08fb6f6a39352a944d1737ceed9fecb9))
+
 ## [4.1.0](https://github.com/ravorona/eslint-config/compare/4.0.5...4.1.0) (2022-11-14)
 
 
