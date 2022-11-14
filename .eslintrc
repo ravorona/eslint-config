@@ -68,7 +68,6 @@
         "one-var": ["error", { "initialized": "never" }],
         "one-var-declaration-per-line": ["error", "always"],
         "spaced-comment": ["error", "always", { "line": { "markers": ["*package", "!", ","] }, "block": { "balanced": true, "markers": ["*package", "!", ","], "exceptions": ["*"] } }],
-        "template-curly-spacing": ["error", "always"],
         "unicode-bom": ["error", "never"],
         "use-isnan": "error",
         "valid-typeof": "error",
