@@ -1,3 +1,10 @@
+### [4.1.2](https://github.com/ravorona/eslint-config/compare/4.1.1...4.1.2) (2022-11-14)
+
+
+### Bug Fixes
+
+* Rules error ([8b282ea](https://github.com/ravorona/eslint-config/commit/8b282ea672469bfdb7d36ba6a48be75554b8fba7))
+
 ### [4.1.1](https://github.com/ravorona/eslint-config/compare/4.1.0...4.1.1) (2022-11-14)
 
 
