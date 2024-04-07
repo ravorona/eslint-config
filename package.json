@@ -6,6 +6,7 @@
   "repository": "git@github.com:ravorona/eslint-config.git",
   "author": "яαvoroηα <h.rakotonjanahary@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "keywords": [
     "ravorona",
     "eslint"
