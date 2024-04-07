@@ -1,5 +1,17 @@
-## [4.2.1](https://github.com/ravorona/eslint-config/compare/4.1.2...4.2.1) (2024-04-07)
+## [4.2.3](https://github.com/ravorona/eslint-config/compare/4.2.2...4.2.3) (2024-04-07)
 
+
+### Features
+
+* Create rules export ([6e9b85e](https://github.com/ravorona/eslint-config/commit/6e9b85e114062f76926f6e8638dea88756e5aed8))
+
+## [4.2.2](https://github.com/ravorona/eslint-config/compare/4.2.1...4.2.2) (2024-04-07)
+
+### Features
+
+* Documentation update
+
+## [4.2.1](https://github.com/ravorona/eslint-config/compare/4.1.2...4.2.1) (2024-04-07)
 
 ### Features
 
@@ -9,7 +21,6 @@
 
 ## [4.2.0](https://github.com/ravorona/eslint-config/compare/4.1.2...4.2.0) (2024-04-07)
 
-
 ### Features
 
 * Eslint 9 ([8665a55](https://github.com/ravorona/eslint-config/commit/8665a5527af4aeb9ce5ced966ef20e2938607c52))
@@ -17,13 +28,11 @@
 
 ### [4.1.2](https://github.com/ravorona/eslint-config/compare/4.1.1...4.1.2) (2022-11-14)
 
-
 ### Bug Fixes
 
 * Rules error ([8b282ea](https://github.com/ravorona/eslint-config/commit/8b282ea672469bfdb7d36ba6a48be75554b8fba7))
 
 ### [4.1.1](https://github.com/ravorona/eslint-config/compare/4.1.0...4.1.1) (2022-11-14)
-
 
 ### Features
 
@@ -31,13 +40,11 @@
 
 ## [4.1.0](https://github.com/ravorona/eslint-config/compare/4.0.5...4.1.0) (2022-11-14)
 
-
 ### Features
 
 * Remove template-curly-spacing ([0ad3aa2](https://github.com/ravorona/eslint-config/commit/0ad3aa21eb06c60c5b8e6b817af91e8a4e723d3f))
 
 ### [4.0.5](https://github.com/ravorona/eslint-config/compare/4.0.4...4.0.5) (2022-11-14)
-
 
 ### Features
 
