@@ -10,8 +10,7 @@
         "serviceworker": true
     },
     "parserOptions": {
-        "sourceType": "module",
-        "ecmaVersion": 2020
+        "sourceType": "module"
     },
     "globals": {
         "process": true
