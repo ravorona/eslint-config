@@ -19,19 +19,22 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import { configs } from '@eslint/js'
+import js from '@eslint/js'
 
 const jsRules = {
-    'block-spacing': [ 'error', 'always' ],
-    'camelcase': [ 'error', { 'properties': 'never' } ],
+    'block-spacing': ['error', 'always'],
+    'camelcase': ['error', { properties: 'never' }],
     'constructor-super': 'error',
-    'dot-location': [ 'error', 'property' ],
-    'eqeqeq': [ 'error', 'always', { 'null': 'ignore' } ],
-    'handle-callback-err': [ 'error', '^(err|error)$' ],
-    'new-cap': [ 'error', {
-        'newIsCap': true,
-        'capIsNew': false
-    } ],
+    'dot-location': ['error', 'property'],
+    'eqeqeq': ['error', 'always', { null: 'ignore' }],
+    'handle-callback-err': ['error', '^(err|error)$'],
+    'new-cap': [
+        'error',
+        {
+            newIsCap: true,
+            capIsNew: false
+        }
+    ],
     'new-parens': 'error',
     'newline-before-return': 'error',
     'no-array-constructor': 'error',
@@ -50,10 +53,13 @@ const jsRules = {
     'no-implied-eval': 'error',
     'no-irregular-whitespace': 'error',
     'no-iterator': 'error',
-    'no-magic-numbers': [ 'error', {
-        'ignoreArrayIndexes': true,
-        'ignoreDefaultValues': true
-    } ],
+    'no-magic-numbers': [
+        'error',
+        {
+            ignoreArrayIndexes: true,
+            ignoreDefaultValues: true
+        }
+    ],
     'no-new-object': 'error',
     'no-new-require': 'error',
     'no-new-wrappers': 'error',
@@ -66,47 +72,49 @@ const jsRules = {
     'no-undef': 'error',
     'no-undef-init': 'error',
     'no-unmodified-loop-condition': 'error',
-    'no-unneeded-ternary': [ 'error', { 'defaultAssignment': false } ],
+    'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     'no-unreachable': 'error',
-    'no-unused-vars': [ 'error', {
-        'vars': 'all',
-        'args': 'after-used',
-        'ignoreRestSiblings': false
-    } ],
+    'no-unused-vars': [
+        'error',
+        {
+            vars: 'all',
+            args: 'after-used',
+            ignoreRestSiblings: false
+        }
+    ],
     'no-useless-call': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-constructor': 'warn',
     'no-useless-rename': 'error',
     'no-var': 'error',
-    'object-curly-newline': [ 'error', { 'consistent': true } ],
-    'object-property-newline': [ 'error', { 'allowAllPropertiesOnSameLine': false } ],
-    'one-var': [ 'error', { 'initialized': 'never' } ],
-    'one-var-declaration-per-line': [ 'error', 'always' ],
-    'spaced-comment': [ 'error', 'always', {
-        'line': { 'markers': [ '*package', '!', ',' ] },
-        'block': {
-            'balanced': true,
-            'markers': [ '*package', '!', ',' ],
-            'exceptions': [ '*' ]
+    'object-curly-newline': ['error', { consistent: true }],
+    'object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],
+    'one-var': ['error', { initialized: 'never' }],
+    'one-var-declaration-per-line': ['error', 'always'],
+    'spaced-comment': [
+        'error',
+        'always',
+        {
+            line: { markers: ['*package', '!', ','] },
+            block: {
+                balanced: true,
+                markers: ['*package', '!', ','],
+                exceptions: ['*']
+            }
         }
-    } ],
-    'unicode-bom': [ 'error', 'never' ],
+    ],
+    'unicode-bom': ['error', 'never'],
     'use-isnan': 'error',
     'valid-typeof': 'error',
-    'wrap-iife': [ 'error', 'any', { 'functionPrototypeMethods': true } ],
-    'yield-star-spacing': [ 'error', 'both' ],
-    'yoda': [ 'error', 'never' ]
+    'wrap-iife': ['error', 'any', { functionPrototypeMethods: true }],
+    'yield-star-spacing': ['error', 'both'],
+    'yoda': ['error', 'never']
 }
 
 const jsConfig = [
-    configs.recommended,
+    js.configs.recommended,
     {
-        ignores: [
-            'node_modules',
-            'vendor',
-            'public',
-            'dist'
-        ]
+        ignores: ['node_modules', 'vendor', 'public', 'dist']
     },
     {
         languageOptions: {
@@ -118,7 +126,7 @@ const jsConfig = [
         linterOptions: {
             reportUnusedDisableDirectives: 'warn'
         },
-        jsRules
+        rules: jsRules
     }
 ]
 

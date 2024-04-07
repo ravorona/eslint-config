@@ -1,3 +1,11 @@
+## [4.3.1](https://github.com/ravorona/eslint-config/compare/4.3.0...4.3.1) (2024-04-07)
+
+
+### Bug Fixes
+
+* Eslint configuratio ([7842b0f](https://github.com/ravorona/eslint-config/commit/7842b0f2290453c930397d04bcd6c363491ac62c))
+* Module import ([f5c0637](https://github.com/ravorona/eslint-config/commit/f5c063729c7b392b1d830b496fb70fc7c7af1514))
+
 ## [4.3.0](https://github.com/ravorona/eslint-config/compare/4.2.2...4.3.0) (2024-04-07)
 
 

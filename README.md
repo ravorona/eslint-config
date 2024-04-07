@@ -29,13 +29,13 @@ npm i --save-dev \
 Set the shared configurations inside your [ESLint configuration](https://eslint.org/docs/user-guide/configuring)
 
 ```js
-import { configs } from '@ravorona/eslint'
+import ravorona from '@ravorona/eslint-config'
 
 export default [
-    configs.all,
+    ...ravorona.configs.all,
     {
         rules: {
-            "no-unused-vars": "warn"
+            'no-unused-vars': 'warn'
         }
     }
 ]
