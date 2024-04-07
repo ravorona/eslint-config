@@ -19,7 +19,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import { configs } from '@eslint/js'
+import js from '@eslint/js'
 
 const jsRules = {
     'block-spacing': [ 'error', 'always' ],
@@ -99,7 +99,7 @@ const jsRules = {
 }
 
 const jsConfig = [
-    configs.recommended,
+    js.configs.recommended,
     {
         ignores: [
             'node_modules',
