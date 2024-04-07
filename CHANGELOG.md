@@ -1,3 +1,11 @@
+## [4.3.0](https://github.com/ravorona/eslint-config/compare/4.2.2...4.3.0) (2024-04-07)
+
+
+### Features
+
+* Create rules export ([6e9b85e](https://github.com/ravorona/eslint-config/commit/6e9b85e114062f76926f6e8638dea88756e5aed8))
+* Improve export ([7bdbf08](https://github.com/ravorona/eslint-config/commit/7bdbf08d86fe102e946a66c5c2c28bc23495d351))
+
 ## [4.2.3](https://github.com/ravorona/eslint-config/compare/4.2.2...4.2.3) (2024-04-07)
 
 
