@@ -1,19 +1,20 @@
 {
-    "name": "@ravorona/eslint-config",
-    "version": "4.2.0",
-    "description": "ESLint configuration",
-    "main": ".eslintrc",
-    "repository": "git@github.com:ravorona/eslint-config.git",
-    "author": "яαvoroηα <h.rakotonjanahary@gmail.com>",
-    "license": "MIT",
-    "keywords": [
-        "ravorona",
-        "eslint"
-    ],
-    "engines": {
-        "node": ">=8.0.0"
-    },
-    "peerDependencies": {
-        "eslint": "^9.0.0"
-    }
+  "name": "@ravorona/eslint-config",
+  "version": "4.2.1",
+  "description": "ESLint configuration",
+  "main": "eslint.config.js",
+  "repository": "git@github.com:ravorona/eslint-config.git",
+  "author": "яαvoroηα <h.rakotonjanahary@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "ravorona",
+    "eslint"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "peerDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0"
+  }
 }

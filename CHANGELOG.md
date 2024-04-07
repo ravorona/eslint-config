@@ -1,3 +1,12 @@
+## [4.2.1](https://github.com/ravorona/eslint-config/compare/4.1.2...4.2.1) (2024-04-07)
+
+
+### Features
+
+* Eslint 9 ([8665a55](https://github.com/ravorona/eslint-config/commit/8665a5527af4aeb9ce5ced966ef20e2938607c52))
+* Use eslint.config.js file for configurations ([9b61d38](https://github.com/ravorona/eslint-config/commit/9b61d38c92bdc0b6d03905d95719a7fe7638e5e7))
+* Use latest ecmaVersion ([ba2eeab](https://github.com/ravorona/eslint-config/commit/ba2eeab11fe9f8ff0c00ab6522f013d326ea1240))
+
 ## [4.2.0](https://github.com/ravorona/eslint-config/compare/4.1.2...4.2.0) (2024-04-07)
 
 
