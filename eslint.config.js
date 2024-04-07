@@ -19,9 +19,9 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import js from '@eslint/js'
+import { configs } from '@eslint/js'
 
-const rules = {
+const jsRules = {
     'block-spacing': [ 'error', 'always' ],
     'camelcase': [ 'error', { 'properties': 'never' } ],
     'constructor-super': 'error',
@@ -98,8 +98,8 @@ const rules = {
     'yoda': [ 'error', 'never' ]
 }
 
-const config = [
-    js.configs.recommended,
+const jsConfig = [
+    configs.recommended,
     {
         ignores: [
             'node_modules',
@@ -118,9 +118,14 @@ const config = [
         linterOptions: {
             reportUnusedDisableDirectives: 'warn'
         },
-        rules
+        jsRules
     }
 ]
 
-export { rules }
-export default config
+export { jsRules }
+
+export default {
+    configs: {
+        all: jsConfig
+    }
+}
