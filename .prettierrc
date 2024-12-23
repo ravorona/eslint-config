@@ -1,18 +1,20 @@
 {
-    "printWidth": 120,
-    "useTabs": false,
-    "tabWidth": 4,
-    "singleQuote": true,
-    "quoteProps": "consistent",
-    "arrowParens": "avoid",
-    "trailingComma": "none",
-    "semi": false,
-    "overrides": [
-        {
-            "files": ["*.yml"],
-            "options": {
-                "singleQuote": false
-            }
-        }
-    ]
+  "printWidth": 120,
+  "useTabs": false,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "quoteProps": "consistent",
+  "arrowParens": "avoid",
+  "trailingComma": "none",
+  "semi": false,
+  "overrides": [
+    {
+      "files": [
+        "*.yml"
+      ],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

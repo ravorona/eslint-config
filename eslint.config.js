@@ -20,22 +20,27 @@
  */
 
 import js from '@eslint/js'
+import stylistic from '@stylistic/eslint-plugin'
+import globals from 'globals'
 
-const jsRules = {
-    'block-spacing': ['error', 'always'],
-    'camelcase': ['error', { properties: 'never' }],
+/**
+ * Linter rules
+ * @type {Object}
+ */
+const RULES = {
+  GLOBAL: {
+    camelcase: ['error', { properties: 'never' }],
     'constructor-super': 'error',
     'dot-location': ['error', 'property'],
-    'eqeqeq': ['error', 'always', { null: 'ignore' }],
+    eqeqeq: ['error', 'always', { null: 'ignore' }],
     'handle-callback-err': ['error', '^(err|error)$'],
     'new-cap': [
-        'error',
-        {
-            newIsCap: true,
-            capIsNew: false
-        }
+      'error',
+      {
+        newIsCap: true,
+        capIsNew: false
+      }
     ],
-    'new-parens': 'error',
     'newline-before-return': 'error',
     'no-array-constructor': 'error',
     'no-caller': 'error',
@@ -53,13 +58,6 @@ const jsRules = {
     'no-implied-eval': 'error',
     'no-irregular-whitespace': 'error',
     'no-iterator': 'error',
-    'no-magic-numbers': [
-        'error',
-        {
-            ignoreArrayIndexes: true,
-            ignoreDefaultValues: true
-        }
-    ],
     'no-new-object': 'error',
     'no-new-require': 'error',
     'no-new-wrappers': 'error',
@@ -75,65 +73,120 @@ const jsRules = {
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     'no-unreachable': 'error',
     'no-unused-vars': [
-        'error',
-        {
-            vars: 'all',
-            args: 'after-used',
-            ignoreRestSiblings: false
-        }
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: false
+      }
     ],
     'no-useless-call': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-constructor': 'warn',
     'no-useless-rename': 'error',
     'no-var': 'error',
-    'object-curly-newline': ['error', { consistent: true }],
-    'object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],
     'one-var': ['error', { initialized: 'never' }],
-    'one-var-declaration-per-line': ['error', 'always'],
-    'spaced-comment': [
-        'error',
-        'always',
-        {
-            line: { markers: ['*package', '!', ','] },
-            block: {
-                balanced: true,
-                markers: ['*package', '!', ','],
-                exceptions: ['*']
-            }
-        }
-    ],
     'unicode-bom': ['error', 'never'],
     'use-isnan': 'error',
     'valid-typeof': 'error',
-    'wrap-iife': ['error', 'any', { functionPrototypeMethods: true }],
-    'yield-star-spacing': ['error', 'both'],
-    'yoda': ['error', 'never']
+    yoda: ['error', 'never']
+  },
+  STYLISTIC: {
+    '@stylistic/array-element-newline': [
+      'error',
+      {
+        consistent: true,
+        multiline: true
+      }
+    ],
+    '@stylistic/block-spacing': ['error', 'always'],
+    '@stylistic/comma-dangle': ['error', 'never'],
+    '@stylistic/member-delimiter-style': [
+      'error',
+      {
+        multiline: {
+          delimiter: 'none',
+          requireLast: false
+        },
+        singleline: {
+          delimiter: 'comma',
+          requireLast: false
+        }
+      }
+    ],
+    '@stylistic/new-parens': 'error',
+    '@stylistic/object-property-newline': 'error',
+    '@stylistic/one-var-declaration-per-line': ['error', 'always'],
+    '@stylistic/quotes': ['error', 'single'],
+    '@stylistic/quote-props': ['error', 'as-needed'],
+    '@stylistic/semi': ['error', 'never'],
+    '@stylistic/spaced-comment': [
+      'error',
+      'always',
+      {
+        line: {
+          markers: ['*package', '!', ',']
+        },
+        block: {
+          balanced: true,
+          markers: ['*package', '!', ','],
+          exceptions: ['*']
+        }
+      }
+    ],
+    '@stylistic/type-annotation-spacing': [
+      'error',
+      {
+        after: true,
+        before: false
+      }
+    ],
+    '@stylistic/wrap-iife': ['error', 'any', { functionPrototypeMethods: true }],
+    '@stylistic/yield-star-spacing': ['error', 'both']
+  },
+  TYPESCRIPT: {
+    '@typescript-eslint/ban-ts-comment': 'error',
+    '@typescript-eslint/ban-types': 'error',
+    '@typescript-eslint/no-inferrable-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+  }
 }
 
-const jsConfig = [
-    js.configs.recommended,
-    {
-        ignores: ['node_modules', 'vendor', 'public', 'dist']
+/**
+ * Recommended configurations
+ * @type {Array}
+ */
+const recommended = [
+  js.configs.recommended,
+  stylistic.configs['recommended-flat'],
+  {
+    ignores: [
+      'node_modules',
+      'vendor',
+      'public',
+      'dist'
+    ]
+  },
+  {
+    languageOptions: {
+      globals: globals.browser
     },
-    {
-        languageOptions: {
-            sourceType: 'module',
-            globals: {
-                process: true
-            }
-        },
-        linterOptions: {
-            reportUnusedDisableDirectives: 'warn'
-        },
-        rules: jsRules
+    plugins: {
+      '@stylistic': stylistic
+    },
+    rules: {
+      ...RULES.GLOBAL,
+      ...RULES.STYLISTIC
+    },
+    linterOptions: {
+      reportUnusedDisableDirectives: 'warn'
     }
+  }
 ]
 
-export { jsRules }
-
+export { RULES }
 export default {
-    configs: {
-        all: jsConfig
-    }
+  configs: {
+    recommended
+  }
 }
