@@ -1,6 +1,6 @@
 # Changelog
 
-## [unreleased]
+## [5.0.0](https://github.com/ravorona/eslint-config/compare/4.3.1...5.0.0) - 2024-12-23
 
 ### Features
 
