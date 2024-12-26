@@ -11,9 +11,8 @@ Yarn:
 ```bash
 yarn add -D \
     @ravorona/eslint-config \
-    @stylistic/eslint-plugin \
-    @eslint/js \
-    eslint
+    eslint \
+    typescript
 ```
 
 NPM:
@@ -21,9 +20,8 @@ NPM:
 ```bash
 npm i --save-dev \
     @ravorona/eslint-config \
-    @stylistic/eslint-plugin \
-    @eslint/js \
-    eslint
+    eslint \
+    typescript
 ```
 
 ## Usage
@@ -34,12 +32,12 @@ Set the shared configurations inside your [ESLint configuration](https://eslint.
 import ravorona from '@ravorona/eslint-config'
 
 export default [
-    ...ravorona.configs.recommended,
-    {
-        rules: {
-            'no-unused-vars': 'warn'
-        }
+  ...ravorona.configs.recommended,
+  {
+    rules: {
+      'no-unused-vars': 'warn'
     }
+  }
 ]
 ```
 
