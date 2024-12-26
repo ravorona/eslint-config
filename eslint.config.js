@@ -19,9 +19,10 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import js from '@eslint/js'
+import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 /**
  * Linter rules
@@ -29,10 +30,10 @@ import globals from 'globals'
  */
 const RULES = {
   GLOBAL: {
-    camelcase: ['error', { properties: 'never' }],
+    'camelcase': ['error', { properties: 'never' }],
     'constructor-super': 'error',
     'dot-location': ['error', 'property'],
-    eqeqeq: ['error', 'always', { null: 'ignore' }],
+    'eqeqeq': ['error', 'always', { null: 'ignore' }],
     'handle-callback-err': ['error', '^(err|error)$'],
     'new-cap': [
       'error',
@@ -89,16 +90,25 @@ const RULES = {
     'unicode-bom': ['error', 'never'],
     'use-isnan': 'error',
     'valid-typeof': 'error',
-    yoda: ['error', 'never']
+    'yoda': ['error', 'never']
   },
   STYLISTIC: {
-    '@stylistic/array-element-newline': [
+    '@stylistic/array-bracket-newline': [
       'error',
       {
-        consistent: true,
+        minItems: 2,
         multiline: true
       }
     ],
+    '@stylistic/array-bracket-spacing': [
+      'error',
+      'always',
+      {
+        objectsInArrays: false,
+        arraysInArrays: false
+      }
+    ],
+    '@stylistic/array-element-newline': ['error', { minItems: 2 }],
     '@stylistic/block-spacing': ['error', 'always'],
     '@stylistic/comma-dangle': ['error', 'never'],
     '@stylistic/member-delimiter-style': [
@@ -115,6 +125,14 @@ const RULES = {
       }
     ],
     '@stylistic/new-parens': 'error',
+    '@stylistic/operator-linebreak': ['error', 'after'],
+    '@stylistic/object-curly-newline': [
+      'error',
+      {
+        multiline: true,
+        minProperties: 2
+      }
+    ],
     '@stylistic/object-property-newline': 'error',
     '@stylistic/one-var-declaration-per-line': ['error', 'always'],
     '@stylistic/quotes': ['error', 'single'],
@@ -141,14 +159,26 @@ const RULES = {
         before: false
       }
     ],
-    '@stylistic/wrap-iife': ['error', 'any', { functionPrototypeMethods: true }],
+    '@stylistic/wrap-iife': [
+      'error',
+      'any',
+      {
+        functionPrototypeMethods: true
+      }
+    ],
     '@stylistic/yield-star-spacing': ['error', 'both']
   },
   TYPESCRIPT: {
     '@typescript-eslint/ban-ts-comment': 'error',
-    '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/no-inferrable-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unused-expressions': [
+      'error',
+      {
+        allowShortCircuit: true,
+        allowTernary: true
+      }
+    ]
   }
 }
 
@@ -157,36 +187,55 @@ const RULES = {
  * @type {Array}
  */
 const recommended = [
-  js.configs.recommended,
-  stylistic.configs['recommended-flat'],
   {
-    ignores: [
-      'node_modules',
-      'vendor',
-      'public',
-      'dist'
-    ]
+    files: ['**/*.{js,jsx,ts,tsx}']
+  },
+  {
+    ignores: ['node_modules', 'vendor', 'public', 'dist']
   },
   {
     languageOptions: {
-      globals: globals.browser
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
     },
+    linterOptions: {
+      reportUnusedDisableDirectives: 'warn'
+    }
+  },
+  eslint.configs.recommended,
+  stylistic.configs['recommended-flat'],
+  {
     plugins: {
       '@stylistic': stylistic
     },
     rules: {
       ...RULES.GLOBAL,
       ...RULES.STYLISTIC
-    },
-    linterOptions: {
-      reportUnusedDisableDirectives: 'warn'
     }
+  }
+]
+
+/**
+ * Typescript configurations
+ * @type {Array}
+ */
+const typescript = [
+  {
+    files: ['**/*.{ts,tsx}']
+  },
+  ...recommended,
+  ...tseslint.configs.recommended,
+  {
+    rules: RULES.TYPESCRIPT
   }
 ]
 
 export { RULES }
 export default {
   configs: {
-    recommended
+    recommended,
+    typescript
   }
 }
