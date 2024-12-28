@@ -182,26 +182,33 @@ const RULES = {
  * @type {Array}
  */
 const recommended = [
+  eslint.configs.recommended,
+  stylistic.configs['recommended-flat'],
   {
+    name: 'ravorona/recommended/files',
     files: ['**/*.{js,jsx,ts,tsx}']
   },
   {
+    name: 'ravorona/recommended/ignores',
     ignores: ['node_modules', 'vendor', 'public', 'dist']
   },
   {
+    name: 'ravorona/recommended/languages',
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.node
       }
-    },
+    }
+  },
+  {
+    name: 'ravorona/recommended/linter-options',
     linterOptions: {
       reportUnusedDisableDirectives: 'warn'
     }
   },
-  eslint.configs.recommended,
-  stylistic.configs['recommended-flat'],
   {
+    name: 'ravorona/recommended/rules',
     plugins: {
       '@stylistic': stylistic
     },
@@ -217,12 +224,14 @@ const recommended = [
  * @type {Array}
  */
 const typescript = [
-  {
-    files: ['**/*.{ts,tsx}']
-  },
   ...recommended,
   ...tseslint.configs.recommended,
   {
+    name: 'ravorona/typescript/files',
+    files: ['**/*.{ts,tsx}']
+  },
+  {
+    name: 'ravorona/typescript/rules',
     rules: RULES.TYPESCRIPT
   }
 ]
