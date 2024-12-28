@@ -32,9 +32,7 @@ const RULES = {
   GLOBAL: {
     'camelcase': ['error', { properties: 'never' }],
     'constructor-super': 'error',
-    'dot-location': ['error', 'property'],
     'eqeqeq': ['error', 'always', { null: 'ignore' }],
-    'handle-callback-err': ['error', '^(err|error)$'],
     'new-cap': [
       'error',
       {
@@ -42,7 +40,6 @@ const RULES = {
         capIsNew: false
       }
     ],
-    'newline-before-return': 'error',
     'no-array-constructor': 'error',
     'no-caller': 'error',
     'no-class-assign': 'error',
@@ -59,8 +56,6 @@ const RULES = {
     'no-implied-eval': 'error',
     'no-irregular-whitespace': 'error',
     'no-iterator': 'error',
-    'no-new-object': 'error',
-    'no-new-require': 'error',
     'no-new-wrappers': 'error',
     'no-param-reassign': 'error',
     'no-proto': 'error',
