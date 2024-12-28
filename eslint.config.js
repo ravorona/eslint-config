@@ -178,22 +178,22 @@ const RULES = {
 }
 
 /**
- * Recommended configurations
+ * Javascript configurations
  * @type {Array}
  */
-const recommended = [
+const javascript = [
   eslint.configs.recommended,
   stylistic.configs['recommended-flat'],
   {
-    name: 'ravorona/recommended/files',
+    name: 'ravorona/javascript/files',
     files: ['**/*.{js,jsx,ts,tsx}']
   },
   {
-    name: 'ravorona/recommended/ignores',
+    name: 'ravorona/javascript/ignores',
     ignores: ['node_modules', 'vendor', 'public', 'dist']
   },
   {
-    name: 'ravorona/recommended/languages',
+    name: 'ravorona/javascript/languages',
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -202,13 +202,13 @@ const recommended = [
     }
   },
   {
-    name: 'ravorona/recommended/linter-options',
+    name: 'ravorona/javascript/linter-options',
     linterOptions: {
       reportUnusedDisableDirectives: 'warn'
     }
   },
   {
-    name: 'ravorona/recommended/rules',
+    name: 'ravorona/javascript/rules',
     plugins: {
       '@stylistic': stylistic
     },
@@ -224,7 +224,7 @@ const recommended = [
  * @type {Array}
  */
 const typescript = [
-  ...recommended,
+  ...javascript,
   ...tseslint.configs.recommended,
   {
     name: 'ravorona/typescript/files',
@@ -239,7 +239,7 @@ const typescript = [
 export { RULES }
 export default {
   configs: {
-    recommended,
+    javascript,
     typescript
   }
 }
