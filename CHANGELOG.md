@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.0.3](https://github.com/ravorona/eslint-config/compare/5.0.2...5.0.3) - 2024-12-28
+
+### Features
+
+- Add config names - ([78dde9e](https://github.com/ravorona/eslint-config/commit/78dde9e34494eb18b413df088c7a9cef3ad8bbe6)) - яαvoroηα
+
 ## [5.0.2](https://github.com/ravorona/eslint-config/compare/5.0.1...5.0.2) - 2024-12-28
 
 ### Bug Fixes
