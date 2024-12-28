@@ -1,5 +1,15 @@
 # Changelog
 
+## [5.0.4](https://github.com/ravorona/eslint-config/compare/5.0.3...5.0.4) - 2024-12-28
+
+### ⚠ Breaking changes
+
+- Rename recommended configuration into javascript
+
+### Features
+
+-  [**breaking**]Rename recommended configuration into javascript - ([6366040](https://github.com/ravorona/eslint-config/commit/63660400be65e3ac528d1709e48b1f1f7ade3095)) - яαvoroηα
+
 ## [5.0.3](https://github.com/ravorona/eslint-config/compare/5.0.2...5.0.3) - 2024-12-28
 
 ### Features

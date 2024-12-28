@@ -1,6 +1,6 @@
 {
   "name": "@ravorona/eslint-config",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "ESLint configuration",
   "main": "eslint.config.js",
   "repository": "git@github.com:ravorona/eslint-config.git",
