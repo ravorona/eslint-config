@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.0.2](https://github.com/ravorona/eslint-config/compare/5.0.1...5.0.2) - 2024-12-28
+
+### Bug Fixes
+
+- Remove deprecated rules - ([ea3f1a0](https://github.com/ravorona/eslint-config/commit/ea3f1a0647fe003143ae12fb64a8246731b468dd)) - яαvoroηα
+
 ## [5.0.1](https://github.com/ravorona/eslint-config/compare/5.0.0...5.0.1) - 2024-12-26
 
 ### Features
