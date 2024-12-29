@@ -128,7 +128,7 @@ const RULES = {
         minProperties: 2
       }
     ],
-    '@stylistic/object-property-newline': 'error',
+    '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],
     '@stylistic/one-var-declaration-per-line': ['error', 'always'],
     '@stylistic/quotes': ['error', 'single'],
     '@stylistic/quote-props': ['error', 'as-needed'],
