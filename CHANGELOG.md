@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.0.5](https://github.com/ravorona/eslint-config/compare/5.0.4...5.0.5) - 2024-12-29
+
+### Features
+
+- Disable allowAllPropertiesOnSameLine for @stylistic/object-property-newline - ([aea9e4b](https://github.com/ravorona/eslint-config/commit/aea9e4b4ce0deefa754130b5b7377e9d96eb980c)) - яαvoroηα
+
 ## [5.0.4](https://github.com/ravorona/eslint-config/compare/5.0.3...5.0.4) - 2024-12-28
 
 ### ⚠ Breaking changes
