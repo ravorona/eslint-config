@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.1.0](https://github.com/ravorona/eslint-config/compare/5.0.5...5.1.0) - 2025-07-11
+
+### Features
+
+- **(deps)** Dependencies upgrade - ([8cabc2f](https://github.com/ravorona/eslint-config/commit/8cabc2f24a11847ff230465d1ff384228d94bba6)) - яαvoroηα
+
 ## [5.0.5](https://github.com/ravorona/eslint-config/compare/5.0.4...5.0.5) - 2024-12-29
 
 ### Features
