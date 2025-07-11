@@ -31,6 +31,6 @@
     "@eslint/js": "^9.17.0",
     "@stylistic/eslint-plugin": "^2.12.1",
     "globals": "^15.14.0",
-    "typescript-eslint": "^8.18.2"
+    "typescript-eslint": "^8.25.0"
   }
 }
